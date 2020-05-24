@@ -2,7 +2,11 @@
 public abstract class Account implements IBaseRate {
     // List commone properties for Checking and Savings account
 
-    // Construvtor to set base properties and initialize the account
+    // Constructor to set base properties and initialize the account
+    public Account(String name) {
+        System.out.println("Name is " + name);
+        System.out.print("New Account ");
+    }
 
     // List common methods
 
