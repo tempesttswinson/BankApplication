@@ -2,13 +2,13 @@
 public class Checking extends Account {
 
     // List properties specific to Checking account
-    // debit card
-    // pin
+    int debitCardNumber, debitCardPin;
+
     // 2 is first digit in account
 
     // Constructor to initialize checking account properties
-    public Checking(String name) {
-        super(name);
+    public Checking(String name, String sSN, double initDeposit) {
+        super(name, sSN, initDeposit);
         System.out.println("New Checking Account");
     }
 
