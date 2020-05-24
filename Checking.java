@@ -10,9 +10,11 @@ public class Checking extends Account {
     public Checking(String name, String sSN, double initDeposit) {
         super(name, sSN, initDeposit);
         accountNumber = "2" + accountNumber;
-        System.out.println(this.accountNumber);
-        System.out.println("New Checking Account");
     }
 
     // List any methods specific to the Checking account
+    public void showInfo() {
+        super.showInfo();
+        System.out.println("Account Type: Checking");
+    }
 }
