@@ -2,8 +2,8 @@
 public class Checking extends Account {
 
     // List properties specific to Checking account
-    long debitCardNumber;
-    int debitCardPin;
+    private long debitCardNumber;
+    private int debitCardPin;
 
     // 2 is first digit in account
 

@@ -1,11 +1,16 @@
 //Do not want to create objects from this class therefore we are making it abstract. Can not create objects in an abstract class but you can create objects from classes that inheriet the abstract class
 public abstract class Account implements IBaseRate {
     // List common properties for Checking and Savings account
-    String name;
-    String sSN;
-    double balance, rate;
-    String accountNumber;
-    static int index = 10000;
+
+    private String name;
+    private String sSN;
+    private double balance;
+    private static int index = 10000;
+
+    // use the access modifier of proctected if you want your subclasses to have
+    // access but still want to keep hidden from other classes
+    protected double rate;
+    protected String accountNumber;
 
     // Constructor to set base properties and initialize the account
     public Account(String name, String sSN, double initDeposit) {

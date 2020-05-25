@@ -1,7 +1,7 @@
 //keyword extends = inheritence
 public class Savings extends Account {
     // List properties specific to savings account
-    int safteyDepositBoxID, safeteyDepositBoxKey;
+    private int safteyDepositBoxID, safeteyDepositBoxKey;
 
     // constructor to initialize settings for savings properties
     public Savings(String name, String sSN, double initDeposit) {
