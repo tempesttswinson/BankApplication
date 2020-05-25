@@ -7,11 +7,13 @@ public class BankApp {
 
         chkacc1.showInfo();
         System.out.println("************************************");
+        savacct1.compound();
         savacct1.showInfo();
 
         savacct1.deposit(5000);
         savacct1.withdraw(200);
         savacct1.transfer("Brokerage", 3000);
+
         // Read CSV File then create new accounts based on that data
     }
 }
