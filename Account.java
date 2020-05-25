@@ -1,6 +1,6 @@
-//Do not want to create objects from this class there for we are makingit abstract. Can not create objects in an abstract class but you can create objects from classes that inheriet the abstract class
+//Do not want to create objects from this class therefore we are making it abstract. Can not create objects in an abstract class but you can create objects from classes that inheriet the abstract class
 public abstract class Account implements IBaseRate {
-    // List commone properties for Checking and Savings account
+    // List common properties for Checking and Savings account
     String name;
     String sSN;
     double balance, rate;
@@ -16,7 +16,15 @@ public abstract class Account implements IBaseRate {
         // set account number
         index++;
         this.accountNumber = setAccountNumber();
+
+        setRate();// setRate() method is called in the parent class because all subclass have the
+                  // same name for the method
     }
+
+    // Abstract methods are methods that are not defined in the class that they are
+    // created. but all of the subclasses must implement and define the abstrast
+    // method
+    public abstract void setRate();
 
     private String setAccountNumber() {
         String lastTwoOfSSN = sSN.substring(sSN.length() - 2, sSN.length());
@@ -27,7 +35,8 @@ public abstract class Account implements IBaseRate {
 
     // List common methods
     public void showInfo() {
-        System.out.println("Name: " + name + "\nAccount Number: " + accountNumber + "\nBalance: " + balance);
+        System.out.println("Name: " + name + "\nAccount Number: " + accountNumber + "\nBalance: " + balance + "\nRate: "
+                + rate + "%");
     }
 
 }
