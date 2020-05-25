@@ -13,6 +13,8 @@ public class Savings extends Account {
     // List methods specific to savings account
     @Override
     public void setRate() {
+        // the variable rate is inilized in the Account class and therefore is availabe
+        // to all sub classes
         rate = getBaseRate() - .25;
     }
 

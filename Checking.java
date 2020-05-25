@@ -15,8 +15,11 @@ public class Checking extends Account {
     }
 
     // List any methods specific to the Checking account
-    @Override
+
+    @Override // overriding the abstract method from the account class
     public void setRate() {
+        // the variable rate is inilized in the Account class and therefore is availabe
+        // to all sub classes
         rate = getBaseRate() * .15;
     }
 
